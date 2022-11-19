@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <link rel="stylesheet"  href="https://kit.fontawesome.com/f1a454f051.css" crossorigin="anonymous">
+  
+ 
+  <style type="text/css">
+  body{
+    font-size: 16px;
+  }
+  form{
+    align-items: center;
+
+    width: 1500px;
+    height: 800px;
+    background: linear-gradient(to left,#402218,#CA965C,#EEC373);
+    box-shadow: 5px 5px 10px;
+    border-radius: 5px;
+    margin: 2% auto;
+    padding: 20px;
+
+  }
+  .input-box{
+    text-align: center;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    padding: 4px;
+    border-radius: 15px;
+    margin-left: 200px;
+    font-size:25px;
+
+  }
+  .sign-up
+  {
+   margin-left: 200px;
+    background-color: #100F0F;
+    padding: 4px;
+    width: 450px;
+    height: 50px;
+    border-radius: 15px;
+    cursor:pointer;
+    font-size:25px;
+    text-align: center;
+     color: floralwhite;
+  }
+    .result
+    {
+       margin-left: 200px;
+    }
+    .speed{
+       margin-left: 200px;
+
+    }
+    .thank
+    {
+    margin-left: 600px;  
+    }
+
+    
+  </style>
+
+</head>
+  
+<body>
+  <i class="fa-duotone fa-wind-turbine"></i>
+  
+  <form>
+    
+    <h1 style="text-align: center;">The predicted output for given wind speed is:</h1><br><br>
+    <h1 class="speed">Enter the Windspeed : </h1><br><br><input type="text" class="input-box" placeholder="Enter here" required
+    id="Windspeed" /><br><br><br><br><br>
+    
+    <input type="button" class="sign-up" onClick="predictWindspeed()" 
+    Value="Prediction" /><br><br><br>
+    <h1 style="text-align:justify-all;" class="result">Predicted power in Watts : <br><br>
+      
+   <span id = "result"></span>
+   <h1 class="thank"> THANK YOU !!!</h1>
+  </h1>
+  
+    
+  </form>
+  
+  
+  
+  
+  <script>
+    function predictWindspeed()
+    {
+      Windspeed = document.getElementById(
+        "Windspeed").value;
+      document.getElementById(
+        "result").innerHTML = Windspeed*Windspeed*Windspeed*277 ;
+    }
+  </script>
+</body>
+  
+</html>
